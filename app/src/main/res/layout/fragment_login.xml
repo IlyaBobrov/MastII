@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Auth.loginFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="top|center"
+        android:text="This is LogIn fragment" />
+
+    <Button
+        android:id="@+id/btnRePass"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_gravity="start"
+        android:textAllCaps="false"
+        android:text="Repass"
+        android:onClick="onClickRePass"
+        />
+
+    <Button
+        android:id="@+id/btnLogUp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textAllCaps="false"
+        android:text="LogUp"
+        android:onClick="onClickLogUp"
+        />
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textAllCaps="false"
+        android:text="LogIn"
+        android:onClick="onClickLogIn"
+        />
+
+
+</FrameLayout>

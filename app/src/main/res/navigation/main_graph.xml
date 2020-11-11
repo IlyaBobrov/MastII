@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/logupFragment"
+        android:name="com.example.mastii.Auth.logupFragment"
+        android:label="fragment_logup"
+        tools:layout="@layout/fragment_logup" >
+        <action
+            android:id="@+id/action_logupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repassFragment"
+        android:name="com.example.mastii.Auth.repassFragment"
+        android:label="fragment_repass"
+        tools:layout="@layout/fragment_repass" >
+        <action
+            android:id="@+id/action_repassFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mastii.Auth.loginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_logupFragment"
+            app:destination="@id/logupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_repassFragment"
+            app:destination="@id/repassFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.mastii.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

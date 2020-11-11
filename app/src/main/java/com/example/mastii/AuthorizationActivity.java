@@ -1,34 +1,22 @@
 package com.example.mastii;
 
-import androidx.appcompat.app.AppCompatActivity;
-//import androidx.fragment.app.Fragment;
-
-import android.app.FragmentTransaction;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ToggleButton;
-
-import com.example.mastii.Auth.AuthFragment;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 public class AuthorizationActivity extends AppCompatActivity {
 
     final String TAG = "lifecycle";
+    NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authorization);
-
-        /*Fragment frag = new Fragment();
-
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.add(R.id.fragmentTest, frag);
-        ft.commit();*/
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
         Log.d(TAG, "onCreate");
     }
@@ -63,12 +51,15 @@ public class AuthorizationActivity extends AppCompatActivity {
         Log.d(TAG, "onDestroy");
     }
 
-    public void onClickPause(View view) {
-        boolean on = ((ToggleButton) view).isChecked();
-        if (on) {
-            Snackbar.make(view, "start", Snackbar.LENGTH_LONG).show();
-        } else {
-            Snackbar.make(view, "stop", Snackbar.LENGTH_LONG).show();
-        }
+    public void onClickRePass(View view) {
+        navController.navigate(R.id.action_loginFragment_to_repassFragment);
+    }
+
+    public void onClickLogUp(View view) {
+        navController.navigate(R.id.action_loginFragment_to_logupFragment);
+    }
+
+    public void onClickLogIn(View view) {
+        navController.navigate(R.id.mainActivity);
     }
 }
