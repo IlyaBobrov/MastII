@@ -5,24 +5,23 @@
     android:layout_height="match_parent"
     tools:context=".Auth.loginFragment">
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_gravity="top|center"
-        android:text="This is LogIn fragment" />
+        android:text="Авторизация" />-->
 
     <Button
         android:id="@+id/btnRePass"
-        android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_gravity="start"
-        android:textAllCaps="false"
-        android:text="Repass"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
         android:onClick="onClickRePass"
-        />
+        android:text="Repass"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btnLogUp"
