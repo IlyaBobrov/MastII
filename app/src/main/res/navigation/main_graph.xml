@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/logupFragment"
-        android:name="com.example.mastii.Auth.logupFragment"
+        android:name="com.example.mastii.logupFragment"
         android:label="fragment_logup"
         tools:layout="@layout/fragment_logup" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/repassFragment"
-        android:name="com.example.mastii.Auth.repassFragment"
+        android:name="com.example.mastii.repassFragment"
         android:label="fragment_repass"
         tools:layout="@layout/fragment_repass" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.mastii.Auth.loginFragment"
+        android:name="com.example.mastii.loginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -48,4 +48,9 @@
         android:name="com.example.mastii.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/forumActivity"
+        android:name="com.example.mastii.ForumActivity"
+        android:label="activity_forum"
+        tools:layout="@layout/activity_forum" />
 </navigation>

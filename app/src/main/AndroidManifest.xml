@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".forum.ForumActivity"
+        <activity android:name=".ForumActivity"
                     android:theme="@style/AppTheme.NoBar">
         </activity>
 

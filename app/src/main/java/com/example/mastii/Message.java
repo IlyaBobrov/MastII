@@ -1,4 +1,4 @@
-package com.example.mastii.forum;
+package com.example.mastii;
 
 import java.util.Date;
 
@@ -8,7 +8,13 @@ public class Message {
     public String textMessage;
     private long messageTime;
 
-    public void Message() {
+    public Message() {}
+
+    public Message(String userName, String textMessage) {
+        this.userName = userName;
+        this.userRole = "none";
+        this.textMessage = textMessage;
+        this.messageTime = new Date().getTime();
     }
 
     public void Message(String userName, String userRole, String textMessage) {
