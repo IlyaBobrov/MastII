@@ -6,9 +6,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ForumActivity"
+    android:layout_margin="10dp"
     android:id="@+id/activity_forum">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+    <ImageView
+        android:id="@+id/btnEmoji"
+        android:padding="4dp"
+        android:layout_toLeftOf="@id/btnSend"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_smile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <ImageView
+        android:id="@+id/btnSend"
+        android:padding="4dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@android:drawable/ic_menu_send"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+        android:id="@+id/messageField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:emojiconSize="29sp"
+        android:layout_toLeftOf="@+id/btnEmoji"
+        />
+
+
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,17 +63,20 @@
             android:layout_height="wrap_content"
             android:hint="Введите сообщение..."
             />
-    </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>-->
     <ListView
         android:id="@+id/listOfMessages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/text_layout"
+        android:layout_above="@+id/messageField"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:divider="@android:color/transparent"
         android:dividerHeight="5dp"
-        android:layout_marginBottom="10dp">
-
+        android:layout_marginBottom="10dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:choiceMode="multipleChoice"
+        >
     </ListView>
 </RelativeLayout>
