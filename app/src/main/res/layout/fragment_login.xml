@@ -1,51 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginFragment">
+    tools:context=".loginFragment"
+    android:layout_margin="10dp">
 
-    <!--<TextView
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_gravity="top|center"
-        android:text="Авторизация" />-->
+        android:text="@string/textAuthorization"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnRePass"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linear_layout_btn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
-        android:onClick="onClickRePass"
-        android:text="Repass"
-        android:textAllCaps="false" />
+        android:orientation="horizontal"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogInPassword">
 
-    <Button
+        <Button
+            android:id="@+id/btnRePass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:onClick="onButtonClick"
+            android:layout_weight="1"
+            android:text="@string/textRePass"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:onClick="onButtonClick"
+            android:layout_weight="10"
+            android:text="@string/textLogIn"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <TextView
         android:id="@+id/btnLogUp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+        android:onClick="onButtonClick"
+        android:text="@string/textLogUp"
+        android:clickable="true"
         android:textAllCaps="false"
-        android:text="LogUp"
-        android:onClick="onClickLogUp"
-        />
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_btn" />
 
-    <Button
-        android:id="@+id/btnLogIn"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="50dp"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextLogInEmail"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:textAllCaps="false"
-        android:text="LogIn"
-        android:onClick="onClickLogIn"
-        />
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/fui_email_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/editTextLogInPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/fui_password_hint"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogInEmail" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
